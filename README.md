@@ -5,7 +5,9 @@
 
 #AWS simply confused me by keeping the Hosted Zone ID:ZXXXXXXXXX beside the alias records inside the Hosted Zone.
 
-'aws route53 list-hosted-zones-by-name | jq'
+$ aws route53 list-hosted-zones-by-name | jq
+
+$ aws route53 change-resource-record-sets --hosted-zone-id Z1E5QYKGMFGDPA --change-batch file://r53.json
 
 #To execute above commands and get the host-none id you need to get "AmazonRoute53AutoNamingFullAccess" policy for the      u user/group.
 
