@@ -1,0 +1,17 @@
+//The below policy is used to upsert(update) the changed ip or value to the 'Alias' records in R53.
+//AWS simply confused me by keeping the Hosted Zone ID:ZXXXXXXXXX 
+//aws route53 list-hosted-zones-by-name | jq #get the hosted name ID 
+// To execute above commands and get the host-none id you need to get "AmazonRoute53AutoNamingFullAccess" policy for the user/group.
+// Dont confuse with hosted zone id in Alias attributes.
+
+{
+    "Comment": "CREATE/DELETE/UPSERT a record ",
+    "Changes": [{
+    "Action": "UPSERT",
+                "ResourceRecordSet": {
+                            "Name": "xerver.anandbr.com",
+                            "Type": "A",
+                            "TTL": 300,
+                         "ResourceRecords": [{ "Value": "4.4.4.4"}]
+}}]
+}
