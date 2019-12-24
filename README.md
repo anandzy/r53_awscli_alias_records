@@ -11,4 +11,10 @@ $ aws route53 change-resource-record-sets --hosted-zone-id Z1E5QYKGMFGDPA --chan
 
 #To execute above commands and get the host-none id you need to get "AmazonRoute53AutoNamingFullAccess" policy for the      u user/group.
 
+# To invalidate(update) the objects to cdn from the s3 bucket the below command with invalidate.json
+# get the list of distribution list with below command
+$ aws cloudfront list-invalidations --distribution-id ECGOJT7XCZQJV
+# create invalidation request 
+$ aws cloudfront create-invalidation --distribution-id ECGOJT7XCZQJV --invalidation-batch file://invalidate_cdn.json
+
 ****Dont confuse with hosted zone id in Alias attributes.*****
