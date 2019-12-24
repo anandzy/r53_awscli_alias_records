@@ -6,6 +6,6 @@
                             "Name": "xerver.anandbr.com",
                             "Type": "A",
                             "TTL": 300,
-                         "ResourceRecords": [{ "Value": "4.4.4.4"}]
+                         "ResourceRecords": [{ "Value": "92.35.118.197"}]
 }}]
 }
