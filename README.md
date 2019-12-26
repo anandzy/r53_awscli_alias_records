@@ -3,6 +3,7 @@
 ### The above policy is used to upsert(update) the changed ip or value to the 'Alias' records in R53.
 ### AWS simply confused me by keeping the Hosted Zone ID:ZXXXXXXXXX beside the alias records inside the Hosted Zone.
 ` aws route53 list-hosted-zones-by-name | jq`
+### Change the resource records.
 ` aws route53 change-resource-record-sets --hosted-zone-id Z1E5QYKGMFGDPA --change-batch file://r53.json`
 ### To execute above commands and get the host-none id you need to get "AmazonRoute53AutoNamingFullAccess" policy for the U/G   
 ### To invalidate(update) the objects to cdn from the s3 bucket the below command with invalidate.json
