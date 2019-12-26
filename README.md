@@ -1,5 +1,5 @@
 ### r53_awscli_alias_records
-### This repo have the policy &amp; awscli input file format to update(UPSERT) the changed ip address for the machine.
+### -This repo have the policy &amp; awscli input file format to update(UPSERT) the changed ip address for the machine.
 ### The above policy is used to upsert(update) the changed ip or value to the 'Alias' records in R53.
 ### AWS simply confused me by keeping the Hosted Zone ID:ZXXXXXXXXX beside the alias records inside the Hosted Zone.
 ` aws route53 list-hosted-zones-by-name | jq`
