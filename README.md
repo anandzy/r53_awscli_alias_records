@@ -14,3 +14,6 @@
 `aws cloudfront create-invalidation --distribution-id ECGOJT7XCZQJV --invalidation-batch file://invalidate_cdn.json`
 
 **Dont confuse with hosted zone id in Alias attributes.**
+
+#### Flow chart
+`https://www.lucidchart.com/documents/view/cdcc2970-7a7b-4496-bacb-3bf98c6e4d07/0_0`
